@@ -1,3 +1,12 @@
+<?php  session_start();
+// Nếu click vào nút Lưu Session
+if (isset($_POST['txtLogin']))
+{
+    // Lưu Session
+	$_SESSION['name'] = $_POST['txtUsername'];
+
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

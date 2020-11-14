@@ -30,7 +30,14 @@ include ('../include/function.php');
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" name="txtUserID" id="txtUserID"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin</a>
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <?php
+                                if (isset($_SESSION['name']))
+                                {
+                                echo $_SESSION['name'];
+                                }
+                            ?>
+                        </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
                             <a class="dropdown-item" href="#">Change Password</a>
                             <a class="dropdown-item" href="#">Log Out</a>
